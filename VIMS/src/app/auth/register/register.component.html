@@ -1,23 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login Page</title>
-</head>
-<body>
-  <div class="container">
-    <h1 class="title">VIMS</h1>
-    <form class="form">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="text" placeholder="Date of Birth">
-        <input type="text" placeholder="Phone Number">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Confirm Password">  
-        <br>
-      <input type="submit" value="Sign-Up">
-    </form>
-    <a routerLink="/login" class="register-link">Already have an account? Login</a>
+<!-- partial:index.partial.html -->
+<div id="signup-form-wrap">
+  <div class="brand">
+    <a href="/home">
+      <img src="assets/img/insurancy_logo.png" alt="insurancy-logo" border="0">
+    </a>
   </div>
-</body>
-</html>
+  <h2>Register</h2>
+  <form id="signup-form">
+    <p>
+    <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+      <input type="text" id="phone" name="phone" placeholder="Phone Number" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+      <input type="date" id="dob" name="dob" placeholder="DOB" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="submit" id="signup" value="Register">
+    </p>
+  </form>
+  <div id="already-account-wrap">
+    <p>Already have an Account? <a href="/login">Sign In</a><p>
+  </div><!--create-account-wrap-->
+</div><!--login-form-wrap-->
+<!-- partial -->
+  
+
