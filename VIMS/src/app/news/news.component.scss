@@ -298,6 +298,11 @@ nav ul.dropdown-list
 	color: var(--third-color);
 }
 /*-------------------------- Menu style -------------------------*/
+.container {
+	width: 80%; /* or any other desired width */
+	margin: 0 auto;
+  }
+  
 .breadcrumbs
 {
 	background: linear-gradient(rgba(150, 60, 221, 0.1), rgba(17, 17, 69, 0.8));

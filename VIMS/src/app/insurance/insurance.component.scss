@@ -323,9 +323,13 @@ nav ul.dropdown-list
 }
 /*------------------ Breadcrumb styling --------------------*/
 
-
+.container {
+	width: 80%; /* or any other desired width */
+	margin: 0 auto;
+  }
 
 /*------------------ Insurance service card styling ---------------*/
+
 .services
 {
 	margin-top: 2.6rem;

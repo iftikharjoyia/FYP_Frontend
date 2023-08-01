@@ -341,6 +341,10 @@ nav ul.dropdown-list
 
 
 /*------------------------------ Contact Info ---------------------------*/
+.container {
+	width: 80%; /* or any other desired width */
+	margin: 0 auto;
+  }
 .contact-info
 {
 	background: linear-gradient(rgba(10, 17, 79, 0.9), rgba(10, 17, 79, 0.9));

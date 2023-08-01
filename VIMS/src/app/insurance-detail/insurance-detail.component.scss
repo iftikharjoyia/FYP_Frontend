@@ -354,7 +354,10 @@ nav ul.dropdown-list
 }
 /*------------------ Insurance description --------------------*/
 
-
+.container {
+	width: 80%; /* or any other desired width */
+	margin: 0 auto;
+  }
 
 /*--------------------- Plocies description ---------------------*/
 .single-policy

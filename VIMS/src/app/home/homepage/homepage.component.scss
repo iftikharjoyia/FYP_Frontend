@@ -325,8 +325,8 @@ nav ul.dropdown-list
 /*-------- Blue button ---------*/
 .btn-blue
 {
-	background: var(--blue-color);
 	transition: 0.3s ease-in-out;
+	
 }
 
 .btn-blue:hover
@@ -336,7 +336,8 @@ nav ul.dropdown-list
 
 .btn-blue a
 {
-	color: var(--fourth-color);
+	
+	color: var(--secondary-color);
 }
 
 .btn-blue:hover > a
@@ -348,6 +349,7 @@ nav ul.dropdown-list
 {
 	background: var(--blue-color);
 	transition: 0.3s ease-in-out;
+	
 }
 
 .btn-blue:hover
@@ -411,11 +413,13 @@ nav ul.dropdown-list
 /*------------ Full width button ------------*/
 .btn-full-w
 {
-	padding: 1.2rem 2rem;
+	padding: 2.2rem 2rem;
 	display: block;
 	width: 100%;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	
 }
+
 
 
 

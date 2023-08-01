@@ -101,6 +101,7 @@ p
 }
 
 
+
 /*-------------------------- Menu style -------------------------*/
 .menu-container
 {
@@ -324,6 +325,10 @@ nav ul.dropdown-list
 
 
 /*------------------ Future protection styling ----------------*/
+.container {
+	width: 80%; /* or any other desired width */
+	margin: 0 auto;
+  }
 .future-protection-imgs
 {
 	margin: 2rem 0;
@@ -471,7 +476,7 @@ nav ul.dropdown-list
 .about-cta
 {
 	background: linear-gradient(rgba(10, 17, 79, 0.9), rgba(10, 17, 79, 0.9));
-	background-position: center top;
+	background-position: center ;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
@@ -504,9 +509,11 @@ nav ul.dropdown-list
 
 
 	/*-------------- Future styling --------------*/
+	
 	.future .container
 	{
 		text-align: center;
+		// margin-left:17%;
 	}
 
 	.future .para-line
