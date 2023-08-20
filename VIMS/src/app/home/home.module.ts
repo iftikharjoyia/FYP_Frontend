@@ -14,7 +14,7 @@ import { FotorComponent } from './fotor/fotor.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FotorComponent,
+    
   ]
 })
 export class HomeModule { }

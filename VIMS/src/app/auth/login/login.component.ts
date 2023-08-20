@@ -1,25 +1,27 @@
-import { Component } from '@angular/core';
-/*tslint:disable*/
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
-  email: string;
-  password: string;
+export class LoginComponent implements OnInit {
+  username:any;
+  password:any;
+  constructor() { }
 
-  constructor() {
-    this.email = '';
-    this.password = '';
+  ngOnInit(): void {
   }
 
-  login() {
-    // Implement your login logic here
-    console.log('Login button clicked');
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
-  }
+  // login(username: any, password: any) {
+  //   this.authService.signIn({ username, password }).subscribe(
+  //     response => {
+  //       // Handle successful login, store JWT token, etc.
+  //     },
+  //     error => {
+  //       // Handle login error
+  //     }
+  //   );
+  // }
 }

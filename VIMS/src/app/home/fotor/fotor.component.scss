@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.quick-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .quick-links {
+        flex-wrap: wrap;
+    }
+
+    .quick-link {
+        margin: 5px;
+    }
+}

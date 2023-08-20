@@ -1,4 +1,3 @@
-<!-- partial:index.partial.html -->
 <div id="signup-form-wrap">
   <div class="brand">
     <a href="/home">
@@ -6,27 +5,32 @@
     </a>
   </div>
   <h2>Register</h2>
-  <form id="signup-form">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
     <p>
-    <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
+      <input type="text" formControlName="username" placeholder="Username" required>
+      <i class="validation"><span></span><span></span></i>
     </p>
     <p>
-    <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+      <input type="email" formControlName="email" placeholder="Email Address" required>
+      <i class="validation"><span></span><span></span></i>
     </p>
     <p>
-      <input type="text" id="phone" name="phone" placeholder="Phone Number" required><i class="validation"><span></span><span></span></i>
+      <input type="text" formControlName="phone" placeholder="Phone Number" required>
+      <i class="validation"><span></span><span></span></i>
     </p>
     <p>
-      <input type="date" id="dob" name="dob" placeholder="DOB" required><i class="validation"><span></span><span></span></i>
+      <input type="password" formControlName="password" placeholder="Password" required>
+      <i class="validation"><span></span><span></span></i>
     </p>
     <p>
-    <input type="submit" id="signup" value="Register">
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required>
+      <i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+      <input type="submit" id="signup" value="Register">
     </p>
   </form>
   <div id="already-account-wrap">
-    <p>Already have an Account? <a href="/login">Sign In</a><p>
-  </div><!--create-account-wrap-->
-</div><!--login-form-wrap-->
-<!-- partial -->
-  
-
+    <p>Already have an Account? <a href="/login">Sign In</a></p>
+  </div>
+</div>
