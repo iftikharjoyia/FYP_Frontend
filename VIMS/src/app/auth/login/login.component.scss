@@ -129,7 +129,7 @@ input[type="email"]:valid ~ .validation span:last-child {
   top: 0px;
 }
 
-input[type="submit"] {
+input[type="button"] {
   border: none;
   display: block;
   background-color: #3ca9e2;
@@ -145,7 +145,7 @@ input[type="submit"] {
   cursor: pointer;
   text-align: center;
 }
-input[type="submit"]:hover {
+input[type="button"]:hover {
   background-color: #329dd5;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
