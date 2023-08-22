@@ -22,17 +22,18 @@ export class RegisterComponent {
       email: (<HTMLInputElement>document.getElementById("email")).value,
       phoneNumber: (<HTMLInputElement>document.getElementById("phone")).value,
       password: (<HTMLInputElement>document.getElementById("password")).value,
-      roles: ["ROLE_USER"]
+      roles: ["user"]
     };
     console.log("Form Data",formData);
     
      this.authService.register(formData).subscribe((Response) => {
        console.log(Response);
-       if (Response.status == 201) {
+       if (Response.status == 201 || Response.status==200) {
          console.log(Response['body']);
+         this.router.navigateByUrl('/login');
+
          if (Response['body'].success) {
            console.log("Data is ", formData);
-           this.router.navigateByUrl('login');
          } else {
            // Handle registration failure
          }

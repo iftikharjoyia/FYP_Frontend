@@ -11,7 +11,11 @@ import { NewsComponent } from './news/news.component';
 import { AgentRegistrationComponent } from './agent-registration/agent-registration.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HomeModule } from './home/home.module';
+import { CommonModule } from '@angular/common';
+import { FotorComponent } from './common/fotor/fotor.component';
+import { HeaderComponent } from './common/header/header.component';
+import { HomepageComponent } from './home/homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewsViewComponent,
     NewsComponent,
     AgentRegistrationComponent,
+    FotorComponent,
+    HeaderComponent,
+    HomepageComponent
 
   ],
   imports: [
@@ -29,6 +36,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    HomeModule,
+    CommonModule
+
   
 
   ],
