@@ -16,6 +16,12 @@ import { CommonModule } from '@angular/common';
 import { FotorComponent } from './common/fotor/fotor.component';
 import { HeaderComponent } from './common/header/header.component';
 import { HomepageComponent } from './home/homepage/homepage.component';
+import { GetQouteModule } from './get-qoute/get-qoute.module';
+import { PersonalDetailComponent } from './get-qoute/personal-detail/personal-detail.component';
+import { ChooseQouteComponent } from './get-qoute/choose-qoute/choose-qoute.component';
+import { PaymentComponent } from './get-qoute/payment/payment.component';
+import { DriverDetailComponent } from './get-qoute/driver-detail/driver-detail.component';
+import { VehicleInformationComponent } from './get-qoute/vehicle-information/vehicle-information.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +34,12 @@ import { HomepageComponent } from './home/homepage/homepage.component';
     AgentRegistrationComponent,
     FotorComponent,
     HeaderComponent,
-    HomepageComponent
+    HomepageComponent,
+    PersonalDetailComponent,
+    ChooseQouteComponent,
+    PaymentComponent,
+    DriverDetailComponent,
+    VehicleInformationComponent
 
   ],
   imports: [
@@ -37,7 +48,8 @@ import { HomepageComponent } from './home/homepage/homepage.component';
     HttpClientModule,
     ReactiveFormsModule,
     HomeModule,
-    CommonModule
+    CommonModule,
+    GetQouteModule
 
   
 

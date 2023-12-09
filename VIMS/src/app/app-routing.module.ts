@@ -13,6 +13,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard.component';
 import { ClientDashboardComponent } from './client/client-dashboard/client-dashboard.component';
 import { AuthGuard } from './auth.guard';
+import { PersonalDetailComponent } from './get-qoute/personal-detail/personal-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,6 +28,8 @@ const routes: Routes = [
    { path: 'admin-dashboard', component: DashboardComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_ADMIN'] } },
    { path: 'agent-dashboard', component: AgentDashboardComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_MODERATOR'] } },
    { path: 'client-dashboard', component: ClientDashboardComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_USER'] } },
+  { path: 'get-qoute', component: PersonalDetailComponent },
+
 ];
 
 @NgModule({
