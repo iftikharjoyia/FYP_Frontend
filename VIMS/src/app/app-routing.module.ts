@@ -14,11 +14,18 @@ import { AgentDashboardComponent } from './agent/agent-dashboard/agent-dashboard
 import { ClientDashboardComponent } from './client/client-dashboard/client-dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { PersonalDetailComponent } from './get-qoute/personal-detail/personal-detail.component';
+import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
+import { VerifyOtpComponent } from './auth/verify-otp/verify-otp.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'forgetpassword', component: ForgetPasswordComponent },
+  { path: 'verify-otp', component: VerifyOtpComponent },
+  { path: 'reset-password', component: ResetPasswordComponent },
+
   { path: 'home', component: HomepageComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent},

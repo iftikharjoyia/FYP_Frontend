@@ -9,11 +9,7 @@ import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
-    PersonalDetailComponent,
-    VehicleInformationComponent,
-    DriverDetailComponent,
-    ChooseQouteComponent,
-    PaymentComponent,
+    
 
   ],
   imports: [
