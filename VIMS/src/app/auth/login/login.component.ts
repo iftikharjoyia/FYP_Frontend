@@ -37,17 +37,31 @@ export class LoginComponent implements OnInit {
         this.userRoles=Response['body'].roles;
         this.userService.setUserDetails(this.userEmail,this.userRoles);
         this.authService.setUserRoles(this.userRoles); // Store user roles in AuthService
+        const previousRoute = localStorage.getItem('previousRoute');
 
-        if (this.userRoles.includes('ROLE_ADMIN')) {
+        if (previousRoute === '/get-qoute' ) {
+          // Do something specific when coming from '/get-quote'
+          // You can clear the stored route if needed
+          
+      
+          // Now, you can navigate to '/login' or any other logic you need
+          this.router.navigate(['/get-qoute'], {
+            queryParams: { returnUrl: '/get-qoute' },
+            state: { roles: ['ROLE_USER', 'ROLE_ADMIN', 'ROLE_MODERATOR'] }
+          });
+        } 
+        else if (this.userRoles.includes('ROLE_ADMIN')) {
           this.router.navigateByUrl('/admin-dashboard');
         } else if (this.userRoles.includes('ROLE_MODERATOR')) {
           this.router.navigateByUrl('/agent-dashboard');
         } else if (this.userRoles.includes('ROLE_USER')) {
           this.router.navigateByUrl('/client-dashboard');
         }
+
         
-         console.log(Response['body']);
-         if (Response['body'].success) {
+        
+       
+          if (Response['body'].success) {
            console.log("Data is ", formData);
          } else {
            // Handle registration failure

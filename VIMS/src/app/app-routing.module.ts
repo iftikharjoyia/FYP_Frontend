@@ -17,6 +17,11 @@ import { PersonalDetailComponent } from './get-qoute/personal-detail/personal-de
 import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
 import { VerifyOtpComponent } from './auth/verify-otp/verify-otp.component';
 import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { VehicleListComponent } from './client/vehicle-list/vehicle-list.component';
+import { DriverDetailComponent } from './get-qoute/driver-detail/driver-detail.component';
+import { VehicleInformationComponent } from './get-qoute/vehicle-information/vehicle-information.component';
+import { PaymentComponent } from './get-qoute/payment/payment.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,7 +40,11 @@ const routes: Routes = [
    { path: 'admin-dashboard', component: DashboardComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_ADMIN'] } },
    { path: 'agent-dashboard', component: AgentDashboardComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_MODERATOR'] } },
    { path: 'client-dashboard', component: ClientDashboardComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_USER'] } },
-  { path: 'get-qoute', component: PersonalDetailComponent },
+  { path: 'vehicle-list', component: VehicleListComponent },
+  { path: 'get-qoute', component: PersonalDetailComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_USER','ROLE_ADMIN','ROLE_MODERATOR'] } },
+  { path: 'adddriver', component: DriverDetailComponent },
+  { path: 'addvehicle', component: VehicleInformationComponent },
+  { path: 'selectoffer', component: PaymentComponent },
 
 ];
 

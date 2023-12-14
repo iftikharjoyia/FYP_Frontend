@@ -1,22 +1,27 @@
-<app-header></app-header>
 <div class="col why-us-lead-form">
     <div class="lead-form">
-        <form action="">
-            <div class="input-field">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Your name" required>
-            </div>
-            <div class="input-field">
-                <label for="number">Phone No.</label>
-                <input type="text" id="number" placeholder="Your phone number" required>
-            </div>
-            <div class="input-field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Your email address" required>
-            </div>
-            <button class="btn btn-blue">
-                <a href="#">Get A Quote</a>
-            </button>
-        </form>
+      <h1>National Data Verification</h1>
+      <form>
+        <div class="input-field">
+          <label for="cnic">CNIC</label>
+          <input type="text" name="cnic" id="cnic" (input)="validateCnic()" placeholder="CNIC" required>
+        </div>
+        <div class="input-field">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name" placeholder="Full Name" required>
+        </div>
+  
+        <div class="input-field">
+          <label for="dateofverification">Date of Verification</label>
+          <input type="text" name="dateofverification" id="dateofverification" placeholder="Date of Verification" required>
+        </div>
+  
+        <div class="input-field">
+          <label for="statusofverification">Status of Verification</label>
+          <input type="text" name="statusofverification" id="statusofverification" placeholder="Status of Verification" required>
+        </div>
+  
+        <button mat-raised-button color="primary" (click)="onSubmit()" *ngIf="isButtonVisible">Next</button>
+      </form>
     </div>
-</div>
+  </div>

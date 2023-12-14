@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 export class ClientDashboardComponent {
   userEmail: string = '';
   userRoles: string[] = [];
+  isVehicleListVisible = false;
  constructor(private userService: UserService){}
  ngOnInit(): void {
   this.userEmail = this.userService.getUserEmail();
@@ -17,5 +18,8 @@ export class ClientDashboardComponent {
   console.log("userRoles",this.userRoles);
   
   
+}
+showMyComponent() {
+  this.isVehicleListVisible = true;
 }
 }

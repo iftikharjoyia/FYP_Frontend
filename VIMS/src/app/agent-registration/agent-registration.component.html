@@ -1,38 +1,35 @@
-<app-header></app-header>
-<section class="breadcrumbs">
-    <div class="breadcrumb-container">
-        <h2 class="hero-heading white">
-            Be An Agent
-        </h2>
-    </div>
-  </section>
-  <div id="signup-form-wrap">
-    <div class="brand">
-      <a href="/home">
-        <img src="assets/img/insurancy_logo.png" alt="insurancy-logo" border="0">
-      </a>
-    </div>
-    <h2>Register</h2>
-    <form id="signup-form">
-      <p>
-      <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
-      </p>
-      <p>
-      <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
-      </p>
-      <p>
-        <input type="text" id="phone" name="phone" placeholder="Phone Number" required><i class="validation"><span></span><span></span></i>
-      </p>
-      <p>
-        <input type="password" id="password" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i> 
-      </p>
-      <p>
-      <input type="submit" id="signup" value="Register">
-      </p>
-    </form>
-    <div id="already-account-wrap">
-      <p>Already have an Account? <a href="/login">Sign In</a><p>
-    </div><!--create-account-wrap-->
+<div class="col why-us-lead-form">
+  <div class="lead-form">
+    <H1>Agent Registeration Form</H1>
+      <form>
+          
+          <div class="input-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter Email" required>
+          </div>
+          <div class="input-field">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" id="phoneNumber" placeholder="Enter Phone Number" required>
+          </div>
+          <div class="input-field">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Enter Password" required>
+          </div>
+          <div class="input-field">
+              <label for="commission">Commission</label>
+              <input type="number" id="commission" placeholder="Enter Commission" required>
+          </div>
+          <div class="input-field">
+              <label for="companyType">Company Type</label>
+              <input type="text" id="companyType" placeholder="Enter Company Type" required>
+          </div>
+          <div class="input-field">
+              <label for="companyName">Company Name</label>
+              <input type="text" id="companyName" placeholder="Enter Company Name">
+          </div>
+          <p>
+              <input type="button" id="registerAgentBtn" value="Register Agent">
+          </p>
+      </form>
   </div>
-
-<app-fotor></app-fotor>
+</div>

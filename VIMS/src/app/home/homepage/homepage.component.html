@@ -15,14 +15,10 @@
         </p>
         <div class="inner-row" style="color: white;" >
           <div class="inner-col">
-            <button class="btn btn-full-w btn-blue">
-              <a href="/services">Find Our Services</a>
-            </button>
+            <button mat-raised-button color="primary" (click)="onService()" >Services</button>
           </div>
           <div class="inner-col">
-            <button class="btn btn-full-w btn-yellow">
-              <a href="/get-qoute">Buy a Quote</a>
-            </button>
+            <button mat-raised-button color="primary" (click)="onSubmit()" >Get Qoute</button>
           </div>
         </div>
       </div>
@@ -78,9 +74,7 @@
               <label for="email">Email Address</label>
               <input type="email" id="email" placeholder="Your email address" required>
             </div>
-            <button class="btn btn-blue">
-              <a href="#">Get A Quote</a>
-            </button>
+            <button mat-raised-button color="primary" (click)="onSubmit()" >Get Qoute</button>
           </form>
         </div>
       </div>
@@ -279,9 +273,7 @@
               <label for="email">Email Address</label>
               <input type="email" id="email" placeholder="Your email address">
             </div>
-            <button class="btn btn-blue">
-              <a href="#">Get A Quote</a>
-            </button>
+            <button mat-raised-button color="primary" (click)="onSubmit()" >Get Qoute</button>
           </form>
         </div>
       </div>

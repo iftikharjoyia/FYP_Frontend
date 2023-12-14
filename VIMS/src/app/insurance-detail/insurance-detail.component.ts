@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-insurance-detail',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class InsuranceDetailComponent {
 
+  constructor(private router:Router){}
+  onSubmit(){
+   
+
+  
+    this.router.navigateByUrl('/get-qoute');
+}
 }

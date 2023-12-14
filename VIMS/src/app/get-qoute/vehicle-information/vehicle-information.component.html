@@ -1,22 +1,29 @@
-<app-header></app-header>
 <div class="col why-us-lead-form">
     <div class="lead-form">
-        <form action="">
-            <div class="input-field">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Your name" required>
-            </div>
-            <div class="input-field">
-                <label for="number">Phone No.</label>
-                <input type="text" id="number" placeholder="Your phone number" required>
-            </div>
-            <div class="input-field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Your email address" required>
-            </div>
-            <button class="btn btn-blue">
-                <a href="#">Get A Quote</a>
-            </button>
-        </form>
+      <h1>Vehicle Data Verification</h1>
+      <form>
+        <div class="input-field">
+          <label for="registration_number">Registration Number</label>
+          <input type="text" name="registration_number" id="registration_number" placeholder="Registration Number" required>
+        </div>
+  
+        <div class="input-field">
+          <label for="model">Model</label>
+          <input type="text" name="model" id="model" placeholder="Model" required>
+        </div>
+  
+        <div class="input-field">
+          <label for="color">Color</label>
+          <input type="text" name="color" id="color" placeholder="Color" required>
+        </div>
+  
+        <div class="input-field">
+          <label for="year">Year</label>
+          <input type="text" name="year" id="year" placeholder="Year" required>
+        </div>
+  
+        <button mat-raised-button color="primary" (click)="onSubmit()">Next</button>
+      </form>
     </div>
-</div>
+  </div>
+  

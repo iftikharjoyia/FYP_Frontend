@@ -327,3 +327,35 @@ p
 		align-items: flex-start;
 	}
 }
+.lead-form
+{
+	border: none;
+	border-radius: 12px;
+	margin: 2.5rem 0;
+	padding: 3rem 1.6rem;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.input-field
+{
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+}
+
+.input-field label
+{
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin: 0.3rem 0;
+	text-transform: uppercase;
+}
+
+.input-field input
+{
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	padding: 1rem;
+	background: #f3f8ff;
+}

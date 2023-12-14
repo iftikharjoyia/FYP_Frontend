@@ -78,59 +78,20 @@
 	padding: 1rem;
 	background: #f3f8ff;
 }
-.btn-blue
-{
-	transition: 0.3s ease-in-out;
+button{
+	background-color: blue;
+	color: #f3f8ff;
+	border: #f3f8ff;
+	padding: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 45%;
+	margin-top: 3px;
 	
 }
+h1{
+	color: #333;
+    margin-bottom: 10px;
+	font-size: 2em;
 
-.btn-blue:hover
-{
-	background: var(--yellow-color);
-}
-
-.btn-blue a
-{
-	
-	color: var(--secondary-color);
-}
-
-.btn-blue:hover > a
-{
-	color: var(--third-color);
-}
-
-.btn-blue
-{
-	background: var(--blue-color);
-	transition: 0.3s ease-in-out;
-    padding: 2.2rem 2rem;
-	display: block;
-	width: 30%;
-    margin-left: 33%;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-	
-}
-
-.btn-blue:hover
-{
-	background: var(--yellow-color);
-}
-
-.btn-blue a
-{
-	color: var(--fourth-color);
-}
-
-.btn-blue:hover > a
-{
-	color: var(--third-color);
-}
-.btn-full-w
-{
-	padding: 2.2rem 2rem;
-	display: block;
-	width: 100%;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-	
 }

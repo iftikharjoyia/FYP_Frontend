@@ -10,7 +10,7 @@ import { NewsViewComponent } from './news-view/news-view.component';
 import { NewsComponent } from './news/news.component';
 import { AgentRegistrationComponent } from './agent-registration/agent-registration.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeModule } from './home/home.module';
 import { CommonModule } from '@angular/common';
 import { FotorComponent } from './common/fotor/fotor.component';
@@ -22,7 +22,10 @@ import { ChooseQouteComponent } from './get-qoute/choose-qoute/choose-qoute.comp
 import { PaymentComponent } from './get-qoute/payment/payment.component';
 import { DriverDetailComponent } from './get-qoute/driver-detail/driver-detail.component';
 import { VehicleInformationComponent } from './get-qoute/vehicle-information/vehicle-information.component';
-@NgModule({
+import { ClientModule } from './client/client.module';
+import { MatButtonModule } from '@angular/material/button';
+
+@NgModule({ 
   declarations: [
     AppComponent,
     ContactComponent,
@@ -39,7 +42,9 @@ import { VehicleInformationComponent } from './get-qoute/vehicle-information/veh
     ChooseQouteComponent,
     PaymentComponent,
     DriverDetailComponent,
-    VehicleInformationComponent
+    VehicleInformationComponent,
+    
+
 
   ],
   imports: [
@@ -49,7 +54,11 @@ import { VehicleInformationComponent } from './get-qoute/vehicle-information/veh
     ReactiveFormsModule,
     HomeModule,
     CommonModule,
-    GetQouteModule
+    GetQouteModule,
+    ClientModule,
+    FormsModule,
+    MatButtonModule
+  
 
   
 

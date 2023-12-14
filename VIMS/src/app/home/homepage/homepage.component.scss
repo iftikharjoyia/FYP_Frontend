@@ -370,6 +370,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
+	color: #fff;
+
 }
 
 .testimonial-profile
@@ -379,6 +381,7 @@
 	align-items: center;
 	gap: 1rem;
 	margin: 1rem;
+	color: #fff;
 }
 
 .profile-img
@@ -588,3 +591,7 @@
 	/*-------------- Testimonial section styling ---------------*/
 }
 
+button{
+	background-color: #fff;
+	border: #fff 2px solid;
+}

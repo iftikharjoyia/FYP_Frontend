@@ -20,4 +20,9 @@ export class AuthGuard implements CanActivate {
 
     return canActivate;
   }
+  private shouldDeactivateGuard(currentUrl: string): boolean {
+    const previousRoute = localStorage.getItem('previousRoute');
+
+    return previousRoute === '/get-qoute';
+  }
 }

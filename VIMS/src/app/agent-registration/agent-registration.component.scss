@@ -1,298 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-/* --------------------- CSS Global variables ------------*/
-:root
+.why-us
 {
-	/*------------ Colors -------------*/
-	--primary-color: #963cdd;     /*---- Purple ----*/
-	--secondary-color: #1668b8;   /*---- Blue ------*/
-	--third-color: #000000;       /*----- Black ------*/
-	--fourth-color: #ffffff;      /*---- White ------*/
-	--blue-color: #2540ce;    /*---- Button Blue -----*/
-	--yellow-color: #fcb900;  /*---- Button Yello ----*/
-
-
-	/*------------ Font Size --------------*/
-	--heading-font-size: 1.5rem;
-	--paragraph-font-size: 1rem;
+	background-image: linear-gradient(
+	  155deg,
+	  hsl(215deg 100% 98%) 0%,
+	  hsl(215deg 100% 98%) 30%,
+	  hsl(215deg 100% 98%) 38%,
+	  hsl(215deg 100% 98%) 43%,
+	  hsl(215deg 100% 98%) 47%,
+	  hsl(215deg 100% 98%) 48%,
+	  hsl(215deg 100% 98%) 50%,
+	  hsl(215deg 100% 98%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 50%,
+	  hsl(215deg 100% 99%) 51%,
+	  hsl(215deg 100% 100%) 53%,
+	  hsl(215deg 100% 100%) 55%,
+	  hsl(215deg 100% 100%) 60%,
+	  hsl(215deg 100% 100%) 68%,
+	  hsl(0deg 0% 100%) 96%
+	);
 }
 
-*
+.why-us-col ion-icon
 {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html
-{
-	font-size: 16px;
-}
-
-body
-{
-	font-family: 'Poppins', sans-serif;
-}
-
-.container
-{
-	padding: 2rem;
-}
-
-.heading
-{
-	font-size: 2.2rem;
-	font-weight: 600;
-	line-height: 1.2;
-	padding: 1rem 0;
-}
-
-.sub-heading
-{
-	color: var(--secondary-color);
-	font-size: 1rem;
-	font-weight: 500;
-	text-transform: uppercase;
-}
-
-img
-{
-	max-width: 100%;
-	height: auto;
-}
-
-h1, h2, h3, h4, h5, h6
-{
-	font-family: 'Poppins', sans-serif;
-}
-
-p
-{
-	font-family: 'Inter', sans-serif;
-}
-
-.white
-{
-	color: #ffffff;
-}
-
-.para-line
-{
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-.btn
-{
-	padding: 0.8rem 2rem;
+	font-size: 2rem;
+	color: var(--fourth-color);
+	background: var(--yellow-color);
+	padding: 1rem;
 	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+	border-radius: 50px;
 }
 
-.btn a
+.why-us-highlight-heading
+{
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.lead-form
+{
+	border: none;
+	border-radius: 12px;
+	margin: 2.5rem 0;
+	padding: 3rem 1.6rem;
+    width: 50%;
+    
+    margin-left: 27%;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.input-field
+{
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+}
+
+.input-field label
+{
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin: 0.3rem 0;
+	text-transform: uppercase;
+}
+
+.input-field input
 {
 	font-size: 1rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 1px;
+	border: none;
+	border-radius: 5px;
+	padding: 1rem;
+	background: #f3f8ff;
 }
-
-
-
-/*------------------ Breadcrumb styling --------------------*/
-.breadcrumbs
+.btn-blue
 {
-	background: linear-gradient(rgba(150, 60, 221, 0.1), rgba(17, 17, 69, 0.8));
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	transition: 0.3s ease-in-out;
+	
 }
 
-.breadcrumb-container
+.btn-blue:hover
 {
-	height: 34vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0 1.5rem;
+	background: var(--yellow-color);
 }
 
-.breadcrumb-container .hero-heading
+.btn-blue a
 {
-	font-size: 3rem;
+	
+	color: var(--secondary-color);
 }
 
-/*-------------------------- Form style -------------------------*/
-body {
-    background-color: rgba(150, 60, 221, 0.4);
-    font-size: 1.6rem;
-    font-family: "Open Sans", sans-serif;
-    color: #2b3e51;
-    margin: 8%;
-    
-  }
-  
-  h2 {
-    font-weight: 300;
-    text-align: center;
-  }
-  
-  p {
-    position: relative;
-  }
-  
-  a,
-  a:link,
-  a:visited,
-  a:active {
-    color: #3ca9e2;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  a:focus, a:hover,
-  a:link:focus,
-  a:link:hover,
-  a:visited:focus,
-  a:visited:hover,
-  a:active:focus,
-  a:active:hover {
-    color: #329dd5;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  
-  #signup-form-wrap {
-  
-    background: linear-gradient(rgba(150, 60, 221, 0.4), rgba(22, 104, 184, 0.9));
-    width: 65%;
-    
-    margin: 72px auto;
-    margin-top:6%;
-    text-align: center;
-    padding: 20px 0 0 0;
-    border-radius: 4px;
-    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  #signup-form {
-    padding: 0 60px;
-  }
-  
-  input {
-    color: #fff;
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    outline: none;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 4px;
-    background-color: #fff;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0 0 0 10px;
-    margin: 0;
-    color: #fff;
-    border: 1px solid #c2c0ca;
-    font-style: normal;
-    font-size: 16px;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    position: relative;
-    display: inline-block;
-    background: none;
-  }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    border-color: #ffffff;
-    color: #fff;
-  }
-  input[type="text"]:focus:invalid,
-  input[type="email"]:focus:invalid,
-  input[type="password"]:focus:invalid {
-    color: #cc1e2b;
-    border-color: #cc1e2b;
-  }
-  input[type="text"]:valid ~ .validation,
-  input[type="email"]:valid ~ .validation,
-  input[type="password"]:valid ~ .validation {
-    display: block;
-    border-color: #0C0;
-  }
-  input[type="text"]:valid ~ .validation span,
-  input[type="email"]:valid ~ .validation span,
-  input[type="password"]:valid ~ .validation span {
-    background: #0C0;
-    position: absolute;
-    border-radius: 6px;
-  }
-  input[type="text"]:valid ~ .validation span:first-child,
-  input[type="email"]:valid ~ .validation span:first-child,
-  input[type="password"]:valid ~ .validation span:first-child {
-    top: 30px;
-    left: 14px;
-    width: 20px;
-    height: 3px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  input[type="text"]:valid ~ .validation span:last-child,
-  input[type="email"]:valid ~ .validation span:last-child,
-  input[type="password"]:valid ~ .validation span:last-child {
-    top: 35px;
-    left: 8px;
-    width: 11px;
-    height: 3px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  
-  .validation {
-    display: none;
-    position: absolute;
-    content: " ";
-    height: 60px;
-    width: 30px;
-    right: 15px;
-    top: 0px;
-  }
-  
-  input[type="submit"] {
-    border: none;
-    display: block;
-    background-color: #5193b7;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    font-size: 18px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-  }
-  input[type="submit"]:hover {
-    background-color: #329dd5;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  
-  #already-account-wrap {
-    background-color: #eeedf1;
-    color: #8a8b8e;
-    font-size: 14px;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 0 0 4px 4px;
-  }
+.btn-blue:hover > a
+{
+	color: var(--third-color);
+}
+
+.btn-blue
+{
+	background: var(--blue-color);
+	transition: 0.3s ease-in-out;
+    padding: 2.2rem 2rem;
+	display: block;
+	width: 30%;
+    margin-left: 33%;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	
+}
+
+.btn-blue:hover
+{
+	background: var(--yellow-color);
+}
+
+.btn-blue a
+{
+	color: var(--fourth-color);
+}
+
+.btn-blue:hover > a
+{
+	color: var(--third-color);
+}
+.btn-full-w
+{
+	padding: 2.2rem 2rem;
+	display: block;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	
+}
