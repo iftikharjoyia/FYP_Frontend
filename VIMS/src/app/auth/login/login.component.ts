@@ -48,7 +48,10 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/get-qoute'], {
             queryParams: { returnUrl: '/get-qoute' },
             state: { roles: ['ROLE_USER', 'ROLE_ADMIN', 'ROLE_MODERATOR'] }
+
           });
+        const previousRoute = localStorage.removeItem('previousRoute');
+
         } 
         else if (this.userRoles.includes('ROLE_ADMIN')) {
           this.router.navigateByUrl('/admin-dashboard');

@@ -2,33 +2,37 @@
   <div class="lead-form">
     <H1>Agent Registeration Form</H1>
       <form>
+        <div class="input-field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+        </div>
           
-          <div class="input-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Enter Email" required>
+        <div class="input-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" required>
+        </div>
+        <div class="input-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        </div>
+        <div class="input-field">
+            <label for="commission">Commission</label>
+            <input type="text" id="commission" name="commission" disabled value="2%" required>
           </div>
-          <div class="input-field">
-              <label for="phoneNumber">Phone Number</label>
-              <input type="text" id="phoneNumber" placeholder="Enter Phone Number" required>
-          </div>
-          <div class="input-field">
-              <label for="password">Password</label>
-              <input type="password" id="password" placeholder="Enter Password" required>
-          </div>
-          <div class="input-field">
-              <label for="commission">Commission</label>
-              <input type="number" id="commission" placeholder="Enter Commission" required>
-          </div>
-          <div class="input-field">
-              <label for="companyType">Company Type</label>
-              <input type="text" id="companyType" placeholder="Enter Company Type" required>
-          </div>
-          <div class="input-field">
-              <label for="companyName">Company Name</label>
-              <input type="text" id="companyName" placeholder="Enter Company Name">
-          </div>
+        <div class="input-field">
+            <label for="companyType">Company Type</label>
+            <input type="text" id="companyType" name="companyType" placeholder="Enter Company Type" required>
+        </div>
+        <div class="input-field">
+            <label for="companyName">Company Name</label>
+            <input type="text" id="companyName" name="companyName" placeholder="Enter Company Name">
+        </div>
           <p>
-              <input type="button" id="registerAgentBtn" value="Register Agent">
+              <input type="button" id="registerAgentBtn" value="Register Agent" (click)="onSubmit()">
           </p>
       </form>
   </div>

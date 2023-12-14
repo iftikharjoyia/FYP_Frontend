@@ -17,6 +17,10 @@ export class AuthService {
   register(requestModel: any): Observable<any> {
     return this.http.post(AUTH_API + 'signup', requestModel, { observe: 'response' });
   }
+  registerAgent(requestModel: any): Observable<any> {
+    return this.http.post(AUTH_API + 'signupAgent', requestModel, { observe: 'response' });
+  }
+  
   
   signIn(requestModel: any): Observable<any> {
     return this.http.post(AUTH_API + 'signin', requestModel, { observe: 'response' });
