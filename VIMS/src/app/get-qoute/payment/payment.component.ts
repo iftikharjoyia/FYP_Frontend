@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent {
+constructor(private router:Router){}
 
+  onBasic(){
+    this.router.navigateByUrl("/paymentdetail")
+  }
 }

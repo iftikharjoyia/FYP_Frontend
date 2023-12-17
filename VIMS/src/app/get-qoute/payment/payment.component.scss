@@ -1,98 +1,47 @@
 body {
 	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
 	background-color: #f4f4f4;
-  }.why-us
-  {
-	  background-image: linear-gradient(
-		155deg,
-		hsl(215deg 100% 98%) 0%,
-		hsl(215deg 100% 98%) 30%,
-		hsl(215deg 100% 98%) 38%,
-		hsl(215deg 100% 98%) 43%,
-		hsl(215deg 100% 98%) 47%,
-		hsl(215deg 100% 98%) 48%,
-		hsl(215deg 100% 98%) 50%,
-		hsl(215deg 100% 98%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 50%,
-		hsl(215deg 100% 99%) 51%,
-		hsl(215deg 100% 100%) 53%,
-		hsl(215deg 100% 100%) 55%,
-		hsl(215deg 100% 100%) 60%,
-		hsl(215deg 100% 100%) 68%,
-		hsl(0deg 0% 100%) 96%
-	  );
-  }
-  
-  .why-us-col ion-icon
-  {
-	  font-size: 2rem;
-	  color: var(--fourth-color);
-	  background: var(--yellow-color);
-	  padding: 1rem;
-	  border: none;
-	  border-radius: 50px;
-  }
-  
-  .why-us-highlight-heading
-  {
-	  font-size: 1.4rem;
-	  font-weight: 600;
-  }
-  
-  .lead-form
-  {
-	  border: none;
-	  border-radius: 12px;
-	  margin: 2.5rem 0;
-	  padding: 3rem 1.6rem;
-	  width: 90%;
-	  
-	  margin-left: 4%;
-	  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  }
-
-  .container {
+	margin: 30%;
+	padding: 0;
 	display: flex;
-	justify-content: space-around;
-	padding: 20px;
-  }
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
 
-  .card {
-	width: 300px;
+#payment-form {
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 20px;
-	margin: 20px;
-  }
+	width: 300px;
+	text-align: center;
+	margin-left: 40%;
+	margin-top: 5%;
 
-  .card h2 {
-	color: #333;
-  }
+}
 
-  .card p {
-	color: #666;
-  }
+label {
+	display: block;
+	margin-bottom: 8px;
+}
 
-  .card button {
+input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+}
+
+#pay-button {
+	background-color: #4caf50;
+	color: white;
 	padding: 10px 20px;
-	background-color: #3498db;
-	color: #fff;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	transition: background-color 0.3s;
-  }
+}
 
-  .card button:hover {
-	background-color: #2980b9;
-  }
+#pay-button:hover {
+	background-color: #45a049;
+}

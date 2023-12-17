@@ -22,6 +22,7 @@ import { VehicleListComponent } from './client/vehicle-list/vehicle-list.compone
 import { DriverDetailComponent } from './get-qoute/driver-detail/driver-detail.component';
 import { VehicleInformationComponent } from './get-qoute/vehicle-information/vehicle-information.component';
 import { PaymentComponent } from './get-qoute/payment/payment.component';
+import { ChooseQouteComponent } from './get-qoute/choose-qoute/choose-qoute.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -44,7 +45,8 @@ const routes: Routes = [
   { path: 'get-qoute', component: PersonalDetailComponent, canActivate: [AuthGuard], data: { roles: ['ROLE_USER','ROLE_ADMIN','ROLE_MODERATOR'] } },
   { path: 'adddriver', component: DriverDetailComponent },
   { path: 'addvehicle', component: VehicleInformationComponent },
-  { path: 'selectoffer', component: PaymentComponent },
+  { path: 'selectoffer', component: ChooseQouteComponent },
+  { path: 'paymentdetail', component: PaymentComponent },
 
 ];
 

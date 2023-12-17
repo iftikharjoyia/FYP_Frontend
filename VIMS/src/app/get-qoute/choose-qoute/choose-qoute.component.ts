@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-choose-qoute',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./choose-qoute.component.scss']
 })
 export class ChooseQouteComponent {
+  constructor(private router:Router){}
 
+  onBasic(){
+    this.router.navigateByUrl("/paymentdetail")
+  }
 }
