@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetqouteService {
-  private apiUrl = 'http://localhost:8080/api/personal-details/findbycnic';
+  private apiUrl = 'http://localhost:8080/api/personal-details/';
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +20,10 @@ export class GetqouteService {
       // Add any other headers if required
     });
 
-    return this.http.get(this.apiUrl, { headers, params });
+    return this.http.get(this.apiUrl+'findbycnic', { headers, params });
+  }
+
+  addPersonalDetails(requestModel: any): Observable<any> {
+    return this.http.post(this.apiUrl + 'addPersonalDetails', requestModel, { observe: 'response' });
   }
 }
