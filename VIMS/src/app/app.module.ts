@@ -24,6 +24,8 @@ import { DriverDetailComponent } from './get-qoute/driver-detail/driver-detail.c
 import { VehicleInformationComponent } from './get-qoute/vehicle-information/vehicle-information.component';
 import { ClientModule } from './client/client.module';
 import { MatButtonModule } from '@angular/material/button';
+import { AdminModule } from './admin/admin.module';
+import { AgentModule } from './agent/agent.module';
 
 @NgModule({ 
   declarations: [
@@ -57,7 +59,10 @@ import { MatButtonModule } from '@angular/material/button';
     GetQouteModule,
     ClientModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    AdminModule,
+    AgentModule,
+    ClientModule
   
 
   

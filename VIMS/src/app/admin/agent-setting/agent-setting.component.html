@@ -1,1 +1,27 @@
-<p>agent-setting works!</p>
+<!-- moderators.component.html -->
+<h2>Agents</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Verified/Unverified</th>
+      <th>Update</th>
+
+
+      <!-- Add more columns as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let moderator of users">
+      <td>{{ moderator.username }}</td>
+      <td>{{ moderator.email }}</td>
+      <td>{{ moderator.phoneNumber }}</td>
+      <td>{{ moderator.status }}</td>
+      <td><button (click)="onUpdate(moderator.email)">Update</button></td>
+      <!-- Add more cells as needed -->
+    </tr>
+  </tbody>
+</table>

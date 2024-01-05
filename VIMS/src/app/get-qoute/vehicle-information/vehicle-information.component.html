@@ -4,7 +4,7 @@
       <form>
         <div class="input-field">
           <label for="registration_number">Registration Number</label>
-          <input type="text" name="registration_number" id="registration_number" placeholder="Registration Number" required>
+          <input type="text" name="registration_number" id="registration_number" (input)="validateVehicle()" placeholder="Registration Number" required>
         </div>
   
         <div class="input-field">
@@ -22,7 +22,7 @@
           <input type="text" name="year" id="year" placeholder="Year" required>
         </div>
   
-        <button mat-raised-button color="primary" (click)="onSubmit()">Next</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()" *ngIf="isButtonVisible">Next</button>
       </form>
     </div>
   </div>

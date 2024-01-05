@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class AgentRegistrationComponent {
 constructor(private router: Router,
-  private authservice:AuthService){}
+  private agentRegistrationService:AgentregisterationService){}
 
   onSubmit() {
   
@@ -30,7 +30,7 @@ constructor(private router: Router,
     };
     console.log("Form Data",formData);
     
-     this.authservice.registerAgent(formData).subscribe((Response) => {
+     this.agentRegistrationService.registerAgent(formData).subscribe((Response) => {
        console.log(Response);
        if (Response.status == 201 || Response.status==200) {
          console.log(Response['body']);

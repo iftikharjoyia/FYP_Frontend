@@ -40,11 +40,14 @@ export class PersonalDetailComponent {
     };
 
     this.getQouteService.getPersonalDetailsByCnic(formData.cnic).subscribe((Response) => {
-      console.log(Response);
-      this.isButtonVisible=true;
-
+        
       if (Response.status == 201 || Response.status==200) {
         console.log(Response["body"]);
+        this.isButtonVisible=true;
+      }
+      else{
+        this.isButtonVisible=false;
+
       }
     });
         
@@ -55,12 +58,13 @@ export class PersonalDetailComponent {
       name:(<HTMLInputElement>document.getElementById("name")).value,
       verificationDate:(<HTMLInputElement>document.getElementById("dateofverification")).value,
       verificationStatus:(<HTMLInputElement>document.getElementById("statusofverification")).value,
-      email:this.userService.getUserEmail,
+      email:this.userService.getUserEmail(),
 
     };
     this.getQouteService.addPersonalDetails(formData).subscribe((Response) => {
       console.log(Response);
       if (Response.status == 201 || Response.status==200) {
+        
       this.router.navigateByUrl('/adddriver');
       }});
   }

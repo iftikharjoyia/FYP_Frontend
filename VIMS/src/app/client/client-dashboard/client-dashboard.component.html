@@ -1,49 +1,38 @@
 <div class="container">
-    <div class="sidebar">
-      <h2>Client Dashboard</h2>
-      <div class="nav">
-        <a href="#backup">Backup Database</a>
-        <a (click)="showMyComponent()">Vehicles List</a>
-        <a href="#logout">Logout</a>
-        <a href="#agent-setting">Agent Setting</a>
-
-      </div>
+  <div class="sidebar">
+    <h2>Client Dashboard</h2>
+    <div class="nav">
+      <a (click)="showMyVehicles()" >Vehicles List</a>
+      <a (click)="showMyDrivers()" >Driver List</a>
+      <a (click)="showMyPolicies()" >Policies List</a>
+      <a (click)="showMyProfiles()" >Profiles List</a>
+      <a href="#logout">Logout</a>
+    
     </div>
-    <div class="content">
-      <h1>Welcome, Client!</h1>
-      <div  id="backup">
-        <h2>Backup Database</h2>
-        <p>Click the button below to create a backup of the database.</p>
-        <button>Backup Database</button>
-      </div>
+  </div>
+  <div class="content">
+    <h1>Welcome, Client!</h1>
+    
+
+    <!-------------------------------------------------------------------------------------------->
+
     <div *ngIf="isVehicleListVisible" id="vehicles">
-        <h2>Vehicles List</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Vehicle ID</th>
-              <th>Make</th>
-              <th>Model</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Toyota</td>
-              <td>Corolla</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Honda</td>
-              <td>CR-V</td>
-              <td>2021</td>
-            </tr>
-            <!-- Add more vehicle rows here -->
-          </tbody>
-        </table>
-      </div>
+      <app-vehicle-list></app-vehicle-list>
     </div>
 
-  </div> 
+    <div *ngIf="isDriverListVisible" id="vehicles">
+      <app-drivers-list></app-drivers-list>
+    </div>
+
+    <div *ngIf="isPoliciesListVisible" id="vehicles">
+      <app-policies></app-policies>
+    </div>
+
+    <div *ngIf="isProfilesListVisible" id="vehicles">
+      <app-profiles></app-profiles>
+    </div>
+    <!-- ------------------------------------------------------------------------>
+  
+
+  </div>
+</div>

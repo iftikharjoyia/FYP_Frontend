@@ -1,0 +1,22 @@
+<h2>Profiles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>CNIC</th>
+      <th>Name</th>
+      <th>Verification Date</th>
+   
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let personalDetails of personalDetailsList">
+      <td>{{ personalDetails.cnic }}</td>
+      <td>{{ personalDetails.name }}</td>
+      <td>{{ personalDetails.verificationDate }}</td>
+   
+      <td>{{ personalDetails.email }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,33 @@
+<!-- Combined Table -->
+<h2>Profiles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>CNIC</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>License Number</th>
+      <th>Expiry Date</th>
+      <th>Date of Birth</th>
+      <th>Registeration Number</th>
+      <th>Color</th>
+      <th>Model</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let combinedDetails of combinedDetailsList">
+      <td>{{ combinedDetails.cnic }}</td>
+      <td>{{ combinedDetails.name }}</td>
+      <td>{{ combinedDetails.email }}</td>
+      <td>{{ combinedDetails.licenseNumber }}</td>
+      <td>{{ combinedDetails.expiryDate }}</td>
+      <td>{{ combinedDetails.dob }}</td>
+      <td>{{ combinedDetails.registrationNumber}}</td>
+      <td>{{ combinedDetails.color }}</td>
+      <td>{{ combinedDetails.model }}</td>
+      <td>{{ combinedDetails.year }}</td>
+    </tr>
+  </tbody>
+</table>

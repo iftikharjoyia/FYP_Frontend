@@ -20,7 +20,7 @@
         <label for="date_of_birth">Date Of Birth</label>
         <input type="date" name="date_of_birth" id="date_of_birth" placeholder="Date Of Birth" required>
       </div>
-      <button mat-raised-button color="primary" (click)="onSubmit()" *ngif="isVisible">Next</button>
+      <button mat-raised-button color="primary" (click)="onSubmit()" *ngIf="isButtonVisible" >Next</button>
     </div>
   </div>
   

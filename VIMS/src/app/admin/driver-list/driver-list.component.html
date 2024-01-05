@@ -1,0 +1,22 @@
+<h2>Driver Details</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>License Number</th>
+      <th>Expiry Date</th>
+      <th>Date of Birth</th>
+      <th>Email</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let driverDetails of drivers">
+      <td>{{ driverDetails.licenseNumber }}</td>
+      <td>{{ driverDetails.expiryDate }}</td>
+      <td>{{ driverDetails.dob }}</td>
+      <td>{{ driverDetails.email }}</td>
+     
+    </tr>
+  </tbody>
+</table>

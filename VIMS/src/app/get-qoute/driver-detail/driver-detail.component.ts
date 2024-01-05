@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GetqouteService } from 'src/app/services/getqoute.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -9,14 +9,17 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./driver-detail.component.scss']
 })
 export class DriverDetailComponent {
-  isVisible=false;
+  isButtonVisible=false;
+  Data: any;
   constructor( 
  
     private getQouteService:GetqouteService,
     private router: Router,
     private userService:UserService,
+    private route: ActivatedRoute,
   ){}
   ngOnInit(): void {
+    
     this.validateLicense()
   
     }
@@ -27,12 +30,16 @@ export class DriverDetailComponent {
       licenseNumber: (<HTMLInputElement>document.getElementById("license_number")).value
     };
 
-    this.getQouteService.getPersonalDetailsByCnic(formData.licenseNumber).subscribe((Response) => {
-      console.log(Response);
-      this.isVisible=true;
-
+    this.getQouteService.getDriverDetailsByLiecense(formData.licenseNumber).subscribe((Response) => {
+    
+      
       if (Response.status == 201 || Response.status==200) {
         console.log(Response["body"]);
+        this.isButtonVisible=true;
+      }
+      else{
+        this.isButtonVisible=false;
+
       }
     });
         
@@ -48,9 +55,14 @@ export class DriverDetailComponent {
       
 
     };
+    console.log("FormData",FormData);
+    
+    this.getQouteService.addDriverDetails(formData).subscribe((Response) => {
+      console.log(Response);
+      if (Response.status == 201 || Response.status==200) {
+      this.router.navigateByUrl('/addvehicle');
+      }});
 
-
-    this.router.navigateByUrl('/addvehicle');
   }
 }
 

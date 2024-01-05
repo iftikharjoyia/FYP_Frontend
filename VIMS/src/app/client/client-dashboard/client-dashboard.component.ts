@@ -7,19 +7,36 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./client-dashboard.component.scss']
 })
 export class ClientDashboardComponent {
-  userEmail: string = '';
-  userRoles: string[] = [];
-  isVehicleListVisible = false;
- constructor(private userService: UserService){}
- ngOnInit(): void {
-  this.userEmail = this.userService.getUserEmail();
-  this.userRoles = this.userService.getUserRoles();
-  console.log("Email", this.userEmail);
-  console.log("userRoles",this.userRoles);
-  
-  
-}
-showMyComponent() {
-  this.isVehicleListVisible = true;
-}
+  isVehicleListVisible=false;
+  isDriverListVisible=false;   
+  isPoliciesListVisible=false;
+  isProfilesListVisible=false;
+  showMyVehicles(){
+    this.isVehicleListVisible=true;
+    this.isDriverListVisible=false;   
+    this.isPoliciesListVisible=false;
+    this.isProfilesListVisible=false;
+    
+    } 
+    
+    showMyDrivers(){
+    this.isVehicleListVisible=false;
+    this.isDriverListVisible=true;   
+    this.isPoliciesListVisible=false;
+    this.isProfilesListVisible=false;
+    }
+    
+    showMyPolicies(){
+    this.isVehicleListVisible=false;
+    this.isDriverListVisible=false;   
+    this.isPoliciesListVisible=true;
+    this.isProfilesListVisible=false;
+    }
+    
+    showMyProfiles(){
+    this.isVehicleListVisible=false;
+    this.isDriverListVisible=false;   
+    this.isPoliciesListVisible=false;
+    this.isProfilesListVisible=true;
+    }
 }
