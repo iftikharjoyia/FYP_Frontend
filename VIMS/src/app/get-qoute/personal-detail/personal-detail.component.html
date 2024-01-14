@@ -20,8 +20,13 @@
           <label for="statusofverification">Status of Verification</label>
           <input type="text" name="statusofverification" id="statusofverification" placeholder="Status of Verification" required>
         </div>
+
+        
+          <h6 *ngIf="isErrorVisible" >Data not found. Please check your input.</h6>
+        
   
         <button mat-raised-button color="primary" (click)="onSubmit()" *ngIf="isButtonVisible">Next</button>
       </form>
+     
     </div>
   </div>

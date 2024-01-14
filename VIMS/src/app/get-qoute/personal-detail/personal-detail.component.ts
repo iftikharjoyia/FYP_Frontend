@@ -13,6 +13,7 @@ export class PersonalDetailComponent {
  
   status:boolean=false;
   isButtonVisible = false;
+  isErrorVisible = false;
 
   constructor( 
  
@@ -22,34 +23,40 @@ export class PersonalDetailComponent {
   ){}
 
   ngOnInit(): void {
-  this.validateCnic()
+  
 
   }
 
   
 
   validateCnic(): void {
-     
     const formData = {
-      cnic: (<HTMLInputElement>document.getElementById("cnic")).value, 
-      name:(<HTMLInputElement>document.getElementById("name")).value,
-      verificationDate:(<HTMLInputElement>document.getElementById("dateofverification")).value,
-      verificationStatus:(<HTMLInputElement>document.getElementById("statusofverification")).value,
-      
-
+      cnic: (<HTMLInputElement>document.getElementById("cnic")).value,
+      name: (<HTMLInputElement>document.getElementById("name")).value,
+      verificationDate: (<HTMLInputElement>document.getElementById("dateofverification")).value,
+      verificationStatus: (<HTMLInputElement>document.getElementById("statusofverification")).value,
     };
-
-    this.getQouteService.getPersonalDetailsByCnic(formData.cnic).subscribe((Response) => {
-        
-      if (Response.status == 201 || Response.status==200) {
-        console.log(Response["body"]);
-        this.isButtonVisible=true;
+  
+    this.getQouteService.getPersonalDetailsByCnic(formData.cnic).subscribe(
+      (response) => {
+        console.log(response);
+  
+        if (response.body) {
+          // Data found
+          this.isButtonVisible = true;
+          this.isErrorVisible = false;
+        } else {
+          // Data not found or other error
+          this.isButtonVisible = false;
+          this.isErrorVisible = true;
+        }
+      },
+      (error) => {
+        // Handle error if needed
+        this.isButtonVisible = false;
+        this.isErrorVisible = true;
       }
-      else{
-        this.isButtonVisible=false;
-
-      }
-    });
+    );
         
   }
   onSubmit(){
